@@ -13,7 +13,7 @@ class Game:
         #sprites
         self.all_sprites = pygame.sprite.Group()
         self.paddle_sprites = pygame.sprite.Group()
-        self.player = Player((self.all_sprites, self.paddle_sprites), WINDOW_WIDTH - 50)
+        self.player = Player((self.all_sprites, self.paddle_sprites))
     
     def run(self):
         while self.running:
