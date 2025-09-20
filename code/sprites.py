@@ -40,10 +40,14 @@ class Opponent(Paddle):
     def __init__(self, groups, ball):
         super().__init__(groups)
         self.speed = SPEED['opponent']
+        self.rect.center = POS['opponent']
+        self.ball = ball
     
     def get_direction(self):
-        pass
-
+        self.direction = 1 if self.ball.rect.centery > self.rect.centery else - 1
+        
+        
+        
 class Ball(pygame.sprite.Sprite):
     def __init__(self, groups, paddle_sprites):
         super().__init__(groups)
